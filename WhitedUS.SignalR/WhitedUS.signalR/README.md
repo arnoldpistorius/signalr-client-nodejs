@@ -250,7 +250,7 @@ _____________________________________
 	* Thanks Adrian Soluch https://github.com/n0mad01 
 * v1.0.1: AP: added support for https urls.
 * v1.0.2: README edited
-* v1.0.3: Fixed https (sorry for mistake)
+* v1.0.4: Fixed https (sorry for mistake)
 
 _____________________________________
 
