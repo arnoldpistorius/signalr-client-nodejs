@@ -1,7 +1,13 @@
-﻿# signalr-client
+# signalr-client
 
-By: [Matthew Whited](mailto:matt@whited.us?subject=signalr-client)  (c) 2018
+By: Arnold Pistorius (c) 2019
+Original version by: [Matthew Whited](mailto:matt@whited.us?subject=signalr-client)  (c) 2018
 _____________________________________
+
+## Differences between this version and version by Matthew Whited
+Matthew is no longer maintaining the SignalR client for nodejs. I'm trying to give its masterpiece a second life.
+
+- HTTPS Url support (previously only wss was allowed)
 
 ## Summary
 
@@ -11,7 +17,8 @@ to communicate with a signalR hub over websockets.
 This project does not require jQuery but it also only support websockets.  Fallback to other 
 communication options such as long polling are not supported.  
 
-[Find on GitHub](https://github.com/mwwhited/signalr-client-nodejs)
+[Find on GitHub](https://github.com/arnoldpistorius/signalr-client-nodejs)
+[Find original version on GitHub](https://github.com/mwwhited/signalr-client-nodejs)
 
 _____________________________________
 
@@ -241,6 +248,9 @@ _____________________________________
 * v0.0.18: Updated Websockets version and error handler binding fixed
 	* Thanks https://github.com/jd4ever
 	* Thanks Adrian Soluch https://github.com/n0mad01 
+* v1.0.1: AP: added support for https urls.
+* v1.0.2: README edited
+* v1.0.3: Fixed https (sorry for mistake)
 
 _____________________________________
 
@@ -248,6 +258,8 @@ _____________________________________
 
 * client.Proxy settings currently only work for HTTP and not HTTPS
 _____________________________________
+
+# Please support original author of this library for his outstanding job.
 
 _Donations for this project are graciously accepted by paypal <matt@whited.us>
 or by bitcoin 1NTVscATbu8fo6an8UMS5xiCpVCHV438sj_
