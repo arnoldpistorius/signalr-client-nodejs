@@ -1,4 +1,4 @@
-﻿//# signalr-client
+//# signalr-client
 //By: [Matthew Whited](mailto:matt@whited.us?subject=signalr-client)  (c) 2018
 // v0.0.17
 
@@ -149,10 +149,10 @@ function negotiateProxies(baseUrl, hubNames, onSuccess, onError, _client) {
 
     if (negotiateUrlOptions.protocol === 'http:') {
         var negotiateResult = http.get(negotiateUrlOptions, negotiateFunction).on('error', negotiateErrorFunction);
-    } else if (negotiateUrlOptions.protocol === 'wss:') {
+    } else if (negotiateUrlOptions.protocol === 'wss:' || negotiateUrlOptions.protocol === 'https:') {
         negotiateUrlOptions.protocol = 'https:';
         var negotiateResult = https.get(negotiateUrlOptions, negotiateFunction).on('error', negotiateErrorFunction);
-    } else if(negotiateUrlOptions.protocol !== 'https:') {
+    } else {
         onError('Protocol Error', undefined, negotiateUrlOptions);
     }
 }
@@ -497,10 +497,10 @@ function clientInterface(baseUrl, hubs, reconnectTimeout, doNotStart) {
 
             if (abortUrlOptions.protocol === 'http:') {
                 requestObject = http;
-            } else if (abortUrlOptions.protocol === 'wss:') {
+            } else if (abortUrlOptions.protocol === 'wss:' || abortUrlOptions.protocol === 'https:') {
                 abortUrlOptions.protocol = 'https:';
                 requestObject = https;
-            } else if (abortUrlOptions.protocol !== 'https:') {
+            } else {
                 handlerErrors('Protocol Error', undefined, abortUrlOptions);
             }
 
@@ -603,10 +603,10 @@ function clientInterface(baseUrl, hubs, reconnectTimeout, doNotStart) {
 
         if (startUrlOptions.protocol === 'http:') {
             var startResult = http.get(startUrlOptions, startFunction).on('error', startErrorFunction);
-        } else if (startUrlOptions.protocol === 'wss:') {
+        } else if (startUrlOptions.protocol === 'wss:' || startUrlOptions.protocol === 'https:') {
             startUrlOptions.protocol = 'https:';
             var startResult = https.get(startUrlOptions, startFunction).on('error', startErrorFunction);
-        } else if(startUrlOptions.protocol !== 'https:') {
+        } else {
             onError('Protocol Error', undefined, startUrlOptions);
         }
 
